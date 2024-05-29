@@ -1,0 +1,13 @@
+A:\Quantum Phinance\BookSotre\ModelLayer\bin\Debug\netcoreapp3.1\ModelLayer.exe
+A:\Quantum Phinance\BookSotre\ModelLayer\bin\Debug\netcoreapp3.1\ModelLayer.deps.json
+A:\Quantum Phinance\BookSotre\ModelLayer\bin\Debug\netcoreapp3.1\ModelLayer.runtimeconfig.json
+A:\Quantum Phinance\BookSotre\ModelLayer\bin\Debug\netcoreapp3.1\ModelLayer.runtimeconfig.dev.json
+A:\Quantum Phinance\BookSotre\ModelLayer\bin\Debug\netcoreapp3.1\ModelLayer.dll
+A:\Quantum Phinance\BookSotre\ModelLayer\bin\Debug\netcoreapp3.1\ModelLayer.pdb
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.AssemblyInfoInputs.cache
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.AssemblyInfo.cs
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.csproj.CoreCompileInputs.cache
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.dll
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.pdb
+A:\Quantum Phinance\BookSotre\ModelLayer\obj\Debug\netcoreapp3.1\ModelLayer.genruntimeconfig.cache
