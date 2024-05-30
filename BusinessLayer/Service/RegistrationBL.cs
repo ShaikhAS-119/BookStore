@@ -19,6 +19,11 @@ namespace BusinessLayer.Service
         public Users Register(RegistrationModel model, String role)
         {
             return _registrationRL.Register(model, role);
-        }        
+        }
+
+        public string Login(LoginModel model)
+        {
+            return _registrationRL.Login(model);
+        }
     }
 }

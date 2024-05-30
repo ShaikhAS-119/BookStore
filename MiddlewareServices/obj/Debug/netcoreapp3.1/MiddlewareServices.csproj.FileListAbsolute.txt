@@ -60,3 +60,4 @@ A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\ModelLa
 A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\ModelLayer.exe
 A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\ModelLayer.dll
 A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\ModelLayer.pdb
+A:\Quantum Phinance\BookSotre\MiddlewareServices\obj\Debug\netcoreapp3.1\MiddlewareServices.sourcelink.json

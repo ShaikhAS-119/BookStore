@@ -34,7 +34,25 @@ namespace BookStore_App
             
             services.AddScoped<IRegistrationBL, RegistrationBL>();
             services.AddScoped<IRegistrationRL, RegistrationRL>();
-            
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                  .AddJwtBearer(option =>
+                  {
+                      option.TokenValidationParameters = new TokenValidationParameters
+                      {
+                          ValidateIssuer = true,
+                          ValidateAudience = true,
+                          ValidateLifetime = true,
+                          ValidateIssuerSigningKey = true,
+                          ValidIssuer = Environment.GetEnvironmentVariable("jwtIssuer"),
+                          ValidAudience = Environment.GetEnvironmentVariable("jwtAudience"),
+                          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("jwtKey")))
+                      };
+
+
+                  });
+
+
         }        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

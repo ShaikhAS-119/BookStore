@@ -46,6 +46,31 @@ namespace RepositoryLayer.Service
             return user;
         }
 
-        
+        public string Login(LoginModel model)
+        {
+
+            // FirstOrDefault :LINQ method that returns the first element
+            var data = _dbContext.Users.FirstOrDefault(c => c.Email == model.Email);
+            var hashpassOfUser = _dbContext.Users
+                                    .Where(u => u.Email == model.Email)
+                                    .Select(u => u.Password)
+                                    .FirstOrDefault();
+            //checked pass new and hashpass
+            var pass = VerifyPass.GetPass(model.Password, hashpassOfUser);
+
+            if (pass && data != null)
+            {
+                var key = Environment.GetEnvironmentVariable("jwtKey");
+                var issu = Environment.GetEnvironmentVariable("jwtIssuer");
+                var aud = Environment.GetEnvironmentVariable("jwtAudience");
+
+                var email = model.Email;
+                var role = data.Role;
+
+                var token = new GenerateToken().Generate(key, issu, aud, email, role);
+                return token;
+            }
+            return null;
+        }
     }
 }

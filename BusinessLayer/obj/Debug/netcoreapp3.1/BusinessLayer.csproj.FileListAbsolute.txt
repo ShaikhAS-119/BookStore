@@ -72,3 +72,4 @@ A:\Quantum Phinance\BookSotre\BusinessLayer\bin\Debug\netcoreapp3.1\ModelLayer.d
 A:\Quantum Phinance\BookSotre\BusinessLayer\bin\Debug\netcoreapp3.1\MiddlewareServices.pdb
 A:\Quantum Phinance\BookSotre\BusinessLayer\bin\Debug\netcoreapp3.1\ModelLayer.pdb
 A:\Quantum Phinance\BookSotre\BusinessLayer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+A:\Quantum Phinance\BookSotre\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.sourcelink.json

@@ -15,7 +15,14 @@
       "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "SqlConnection": "Data Source=AS-119\\SQLEXPRESS;Database =BookStore;Integrated Security=True;"
+        "SqlConnection": "Data Source=AS-119\\SQLEXPRESS;Database =BookStore;Integrated Security=True;",
+
+        "jwtKey": "v1gPVplwIaJmp7U2",
+        //: identifies the entity that issued the token
+        "jwtIssuer": "https://localhost:44329",
+        //identifies the recipients that the JWT is intended for
+        "jwtAudience": "https://localhost:44329"
+
       }
     },
     "BookStore_App": {
