@@ -6,19 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repository\**" />
-    <EmbeddedResource Remove="Repository\**" />
-    <None Remove="Repository\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Repository\BookStoreDbContext.cs" />
-    <Compile Include="Repository\Models\Books.cs" />
-    <Compile Include="Repository\Models\Users.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.32" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.32">
       <PrivateAssets>all</PrivateAssets>
@@ -30,6 +20,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.32" />
   </ItemGroup>
 
   <ItemGroup>

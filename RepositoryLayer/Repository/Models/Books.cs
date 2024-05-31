@@ -18,12 +18,11 @@ namespace RepositoryLayer.Repository.Models
         [StringLength(200)]
         public string AuthorName { get; set; }
         public int Price { get; set; }
-        [Column("Discount_Price")]
         public int? DiscountPrice { get; set; }
-        [Column("Book_Description")]
         [StringLength(500)]
         public string BookDescription { get; set; }
-        public byte[] BookImage { get; set; }
+        [StringLength(700)]
+        public string BookImage { get; set; }
         public int UserId { get; set; }
 
         [ForeignKey(nameof(UserId))]

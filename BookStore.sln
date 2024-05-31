@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore_App", "BookStore_App\BookStore_App.csproj", "{4303ED86-1AD7-47AD-B814-91517B3B7F3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore_App", "BookStore_App\BookStore_App.csproj", "{4303ED86-1AD7-47AD-B814-91517B3B7F3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{4F3BD30E-189C-4CCD-8058-D29662786A66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{4F3BD30E-189C-4CCD-8058-D29662786A66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{38A926FF-9B4C-4436-93D6-87AF1B7BE2ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{38A926FF-9B4C-4436-93D6-87AF1B7BE2ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{DFF34A60-2C5C-404E-AE6C-8FA6EC849B65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{DFF34A60-2C5C-404E-AE6C-8FA6EC849B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddlewareServices", "MiddlewareServices\MiddlewareServices.csproj", "{AB1C471B-CFF4-4CBA-A54C-8B669AE05135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddlewareServices", "MiddlewareServices\MiddlewareServices.csproj", "{AB1C471B-CFF4-4CBA-A54C-8B669AE05135}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

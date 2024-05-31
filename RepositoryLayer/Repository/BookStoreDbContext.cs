@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using RepositoryLayer.Repository.Models;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -27,6 +26,7 @@ namespace RepositoryLayer.Repository
         {
             if (!optionsBuilder.IsConfigured)
             {
+
                 optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("SqlConnection"));
             }
         }
@@ -36,11 +36,13 @@ namespace RepositoryLayer.Repository
             modelBuilder.Entity<Books>(entity =>
             {
                 entity.HasKey(e => e.BookId)
-                    .HasName("PK__Books__3DE0C20783272E7E");
+                    .HasName("PK__Books__3DE0C20798397A2E");
 
                 entity.Property(e => e.AuthorName).IsUnicode(false);
 
                 entity.Property(e => e.BookDescription).IsUnicode(false);
+
+                entity.Property(e => e.BookImage).IsUnicode(false);
 
                 entity.Property(e => e.BookName).IsUnicode(false);
 
@@ -48,13 +50,13 @@ namespace RepositoryLayer.Repository
                     .WithMany(p => p.Books)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Books__UserId__4E88ABD4");
+                    .HasConstraintName("FK__Books__UserId__02FC7413");
             });
 
             modelBuilder.Entity<Users>(entity =>
             {
                 entity.HasKey(e => e.UserId)
-                    .HasName("PK__Users__1788CC4CC911CD83");
+                    .HasName("PK__Users__1788CC4C5025DF27");
 
                 entity.Property(e => e.Email).IsUnicode(false);
 

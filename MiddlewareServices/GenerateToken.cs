@@ -13,7 +13,7 @@ namespace MiddlewareServices
 {
     public class GenerateToken
     {        
-        public string Generate(string key, string issu, string aud, string email, string role)
+        public string Generate(string key, string issu, string aud, string email, string role, int userId)
         {
                                  
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
@@ -21,11 +21,12 @@ namespace MiddlewareServices
             var claims = new[]
             {                
                 new Claim("Email", email),
-                new Claim("Role", role)
+                new Claim("Roles", role),
+                new Claim("UserId", userId.ToString())
             };
 
             var Sectoken = new JwtSecurityToken(issu, aud, claims,
-              expires: DateTime.Now.AddMinutes(15),
+              expires: DateTime.Now.AddMinutes(20),
               signingCredentials: credential);
 
             var token = new JwtSecurityTokenHandler().WriteToken(Sectoken);

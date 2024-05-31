@@ -66,8 +66,9 @@ namespace RepositoryLayer.Service
 
                 var email = model.Email;
                 var role = data.Role;
+                var userId = data.UserId;
 
-                var token = new GenerateToken().Generate(key, issu, aud, email, role);
+                var token = new GenerateToken().Generate(key, issu, aud, email, role, userId);
                 return token;
             }
             return null;

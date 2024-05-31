@@ -67,3 +67,8 @@ A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Middleware
 A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\ModelLayer.pdb
 A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 A:\Quantum Phinance\BookSotre\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.sourcelink.json
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
