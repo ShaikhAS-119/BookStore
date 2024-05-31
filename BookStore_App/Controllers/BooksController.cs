@@ -77,11 +77,27 @@ namespace BookStore_App.Controllers
             return Ok(books);
         }
 
-        [HttpPost]
-        [Route("id")]
-        public void GetById(int BookId)
+        [HttpGet("{id}")]        
+        public ResponseModel<Books> GetById(int id)
         {
-            
+            var data = _IbooksBL.GetBoookById(id);
+            var response = new ResponseModel<Books>();
+
+            if( data != null )
+            {
+                response.success=true;
+                response.message = "get successfull";
+                response.data = data;                
+            }
+            else
+            {
+                response.success=false;
+                response.message = "failed to get";
+            }
+
+            return response;
         }
+
+        
     }
 }

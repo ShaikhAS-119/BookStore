@@ -25,5 +25,10 @@ namespace BusinessLayer.Service
         {
             return _IbooksRL.GetAllBooks(userId);
         }
+
+        public Books GetBoookById(int id)
+        {
+           return _IbooksRL.GetBoookById(id);
+        }
     }
 }

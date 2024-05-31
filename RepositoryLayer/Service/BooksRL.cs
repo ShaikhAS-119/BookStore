@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace RepositoryLayer.Service
 {
@@ -54,6 +55,26 @@ namespace RepositoryLayer.Service
                 book.BookImage = data.BookImage;                
             }
             return book;
+        }
+
+        public Books GetBoookById(int id)
+        {
+            var row = _context.Books.FirstOrDefault(f=> f.BookId == id);
+
+            Books book = new Books();
+            if (row != null)
+            {                               
+                book.BookId = row.BookId;
+                book.BookName = row.BookName;
+                book.AuthorName = row.AuthorName;
+                book.Price = row.Price;
+                book.DiscountPrice = row.DiscountPrice;
+                book.BookDescription = row.BookDescription;
+                book.BookImage = row.BookImage;                               
+            }
+
+            return book;
+
         }
     }
 }
