@@ -8,6 +8,7 @@ using ModelLayer.Model;
 using RepositoryLayer.Repository;
 using RepositoryLayer.Repository.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -53,14 +54,15 @@ namespace BookStore_App.Controllers
             return response;
         }
 
-        [HttpGet]              
-        public IActionResult GetBooks()
+        [HttpGet]
+        [Authorize]
+        public List<Books> GetBooks()
         {
             var _userId = User.FindFirstValue("userId");
             var userId = Convert.ToInt32(_userId);
 
-            Books books =_IbooksBL.GetAllBooks(userId);
-            var response = new ResponseModel<Books>();
+            List<Books> books =_IbooksBL.GetAllBooks(userId);
+            var response = new ResponseModel<List<Books>>();
 
             if (books != null)
             {
@@ -74,7 +76,7 @@ namespace BookStore_App.Controllers
                 response.message = "failed to get value";
             }
 
-            return Ok(books);
+            return books;
         }
 
         [HttpGet("{id}")]        
@@ -98,6 +100,25 @@ namespace BookStore_App.Controllers
             return response;
         }
 
-        
+        [HttpPatch("{id}")]
+        public ResponseModel<Books> EditBook(int id, EditBookModel model)
+        {
+           var data = _IbooksBL.EditBookById(id, model);
+            var response = new ResponseModel<Books>();
+
+            if(data!=null)
+            {
+                response.success = true;
+                response.message = "Edited Successfully";
+                response.data = data;
+            }
+            else
+            {
+                response.success=false;
+                response.message = "Failed to update";
+            }
+
+            return response ;
+        }
     }
 }
