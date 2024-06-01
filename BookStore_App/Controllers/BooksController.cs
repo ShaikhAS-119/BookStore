@@ -55,7 +55,7 @@ namespace BookStore_App.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize]        
         public List<Books> GetBooks()
         {
             var _userId = User.FindFirstValue("userId");
@@ -79,10 +79,11 @@ namespace BookStore_App.Controllers
             return books;
         }
 
-        [HttpGet("{id}")]        
-        public ResponseModel<Books> GetById(int id)
+        [HttpGet("{bookid}")]         
+        //check user id
+        public ResponseModel<Books> GetById(int bookid)
         {
-            var data = _IbooksBL.GetBoookById(id);
+            var data = _IbooksBL.GetBoookById(bookid);
             var response = new ResponseModel<Books>();
 
             if( data != null )
@@ -100,10 +101,11 @@ namespace BookStore_App.Controllers
             return response;
         }
 
-        [HttpPatch("{id}")]
-        public ResponseModel<Books> EditBook(int id, EditBookModel model)
+        [HttpPatch("{bookid}")]
+        //check user id
+        public ResponseModel<Books> EditBook(int bookid, EditBookModel model)
         {
-           var data = _IbooksBL.EditBookById(id, model);
+           var data = _IbooksBL.EditBookById(bookid, model);
             var response = new ResponseModel<Books>();
 
             if(data!=null)
@@ -119,6 +121,26 @@ namespace BookStore_App.Controllers
             }
 
             return response ;
+        }
+
+        [HttpDelete("{bookId}")]
+        public IActionResult DeleteBook(int bookId)
+        {
+            var data = _IbooksBL.DeleteBookById(bookId);
+            var response = new ResponseModel<bool>();
+
+            if(data)
+            {
+                response.success=true;
+                response.message = "Deleted Successfully";
+                response.data = data;
+            }
+            else
+            {
+                response.success=false;
+                response.message = "Failed to delete";
+            }
+            return Ok(response);
         }
     }
 }

@@ -35,5 +35,10 @@ namespace BusinessLayer.Service
         {
            return _IbooksRL.EditBookById(id, model);
         }
+
+        public bool DeleteBookById(int id)
+        {
+            return _IbooksRL.DeleteBookById(id);
+        }
     }
 }

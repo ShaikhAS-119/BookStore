@@ -6,6 +6,7 @@ using RepositoryLayer.Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using static System.Reflection.Metadata.BlobBuilder;
@@ -98,6 +99,21 @@ namespace RepositoryLayer.Service
                 _context.SaveChanges();
             }
             return book;
+        }
+
+        public bool DeleteBookById(int id)
+        {
+            bool check = false;
+            var row = _context.Books.FirstOrDefault(f=> f.BookId == id);
+
+            if(row != null)
+            {
+                _context.Books.Remove(row);
+                _context.SaveChanges();
+
+                check = true;
+            }                    
+            return check;
         }
     }
 }
