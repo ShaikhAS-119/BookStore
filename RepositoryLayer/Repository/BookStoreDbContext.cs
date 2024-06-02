@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using RepositoryLayer.Repository.Models;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -20,14 +20,15 @@ namespace RepositoryLayer.Repository
         }
 
         public virtual DbSet<Books> Books { get; set; }
+        public virtual DbSet<Cart> Cart { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-
-                optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("SqlConnection"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Data Source =.\\SQLEXPRESS;Database = BookStore;Integrated Security=true");
             }
         }
 
@@ -51,6 +52,19 @@ namespace RepositoryLayer.Repository
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Books__UserId__02FC7413");
+            });
+
+            modelBuilder.Entity<Cart>(entity =>
+            {
+                entity.HasOne(d => d.Book)
+                    .WithMany(p => p.Cart)
+                    .HasForeignKey(d => d.BookId)
+                    .HasConstraintName("FK__Cart__BookId__19DFD96B");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Cart)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Cart__UserId__18EBB532");
             });
 
             modelBuilder.Entity<Users>(entity =>

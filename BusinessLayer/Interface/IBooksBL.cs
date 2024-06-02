@@ -1,8 +1,6 @@
 ﻿using ModelLayer.Model;
-using RepositoryLayer.Repository.Models;
-using System;
+using RepositoryLayer.Repository;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BusinessLayer.Interface
 {

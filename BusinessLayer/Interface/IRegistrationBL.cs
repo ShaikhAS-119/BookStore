@@ -1,5 +1,5 @@
 ﻿using ModelLayer.Model;
-using RepositoryLayer.Repository.Models;
+using RepositoryLayer.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -1,15 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
-using ModelLayer.Model;
+﻿using ModelLayer.Model;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Repository;
-using RepositoryLayer.Repository.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace RepositoryLayer.Service
 {

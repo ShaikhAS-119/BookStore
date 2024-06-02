@@ -66,3 +66,7 @@ A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Microso
 A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+A:\Quantum Phinance\BookSotre\MiddlewareServices\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll

@@ -1,15 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 using MiddlewareServices;
 using ModelLayer.Model;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Repository;
-using RepositoryLayer.Repository.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
 
 namespace RepositoryLayer.Service
 {

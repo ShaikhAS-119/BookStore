@@ -72,3 +72,7 @@ A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.
 A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+A:\Quantum Phinance\BookSotre\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll

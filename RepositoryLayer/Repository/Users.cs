@@ -7,13 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace RepositoryLayer.Repository.Models
+namespace RepositoryLayer.Repository
 {
     public partial class Users
     {
         public Users()
         {
             Books = new HashSet<Books>();
+            Cart = new HashSet<Cart>();
         }
 
         [Key]
@@ -31,5 +32,7 @@ namespace RepositoryLayer.Repository.Models
 
         [InverseProperty("User")]
         public virtual ICollection<Books> Books { get; set; }
+        [InverseProperty("User")]
+        public virtual ICollection<Cart> Cart { get; set; }
     }
 }

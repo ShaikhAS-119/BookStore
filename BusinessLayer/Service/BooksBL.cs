@@ -2,7 +2,7 @@
 using BusinessLayer.Interface;
 using ModelLayer.Model;
 using RepositoryLayer.Interface;
-using RepositoryLayer.Repository.Models;
+using RepositoryLayer.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;

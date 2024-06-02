@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ModelLayer.Model;
 using RepositoryLayer.Repository;
-using RepositoryLayer.Repository.Models;
+using RepositoryLayer.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +24,14 @@ namespace BookStore_App.Controllers
         
         public BooksController(IBooksBL IbooksBL, BookStoreDbContext context)
         {
-            _IbooksBL = IbooksBL;
-            
-            
+            _IbooksBL = IbooksBL;                        
         }
 
+        /// <summary>
+        /// Add New Books
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Authorize]        
         public ResponseModel<Books> AddBooks(AddBookModel model)
@@ -54,8 +57,13 @@ namespace BookStore_App.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Get All Books
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        [Authorize]        
+        [Authorize]
+        [Route("get")]
         public List<Books> GetBooks()
         {
             var _userId = User.FindFirstValue("userId");
@@ -79,11 +87,16 @@ namespace BookStore_App.Controllers
             return books;
         }
 
-        [HttpGet("{bookid}")]         
+        /// <summary>
+        /// Get Book By ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]         
         //check user id
-        public ResponseModel<Books> GetById(int bookid)
+        public ResponseModel<Books> GetById(int id)
         {
-            var data = _IbooksBL.GetBoookById(bookid);
+            var data = _IbooksBL.GetBoookById(id);
             var response = new ResponseModel<Books>();
 
             if( data != null )
@@ -101,11 +114,17 @@ namespace BookStore_App.Controllers
             return response;
         }
 
-        [HttpPatch("{bookid}")]
+        /// <summary>
+        /// Edit Book Details
+        /// </summary>
+        /// <param name="bookId"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPatch("{bookId}")]
         //check user id
-        public ResponseModel<Books> EditBook(int bookid, EditBookModel model)
+        public ResponseModel<Books> EditBook(int bookId, EditBookModel model)
         {
-           var data = _IbooksBL.EditBookById(bookid, model);
+           var data = _IbooksBL.EditBookById(bookId, model);
             var response = new ResponseModel<Books>();
 
             if(data!=null)
@@ -123,6 +142,11 @@ namespace BookStore_App.Controllers
             return response ;
         }
 
+        /// <summary>
+        /// Delete Book By ID
+        /// </summary>
+        /// <param name="bookId"></param>
+        /// <returns></returns>
         [HttpDelete("{bookId}")]
         public IActionResult DeleteBook(int bookId)
         {

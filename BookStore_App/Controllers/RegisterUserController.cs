@@ -18,18 +18,30 @@ namespace BookStore_App.Controllers
             _dbContext = dbContext;
         }
 
+        /// <summary>
+        /// Add User
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult RegisterUser(RegistrationModel model)
         {
-            return Register(model, "User");
+            return Ok(Register(model, "User"));
         }
+
+        /// <summary>
+        /// Add Admin
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("admin")]
         public IActionResult RegisterAdmin(RegistrationModel model)
         {
-            return Register(model, "Admin");
-        }        
-        public IActionResult Register(RegistrationModel model, string role)
+            return Ok(Register(model, "Admin"));
+        }       
+        
+        private ResponseModel<RegistrationModel> Register(RegistrationModel model, string role)
         {
             var user = _dbContext.Users.FirstOrDefault(c => c.Email == model.Email);
             var response = new ResponseModel<RegistrationModel>();
@@ -37,7 +49,7 @@ namespace BookStore_App.Controllers
             if (user != null)
             {
                 response.message = "Already Exist";
-                return BadRequest(response);
+                return response;
             }
             else
             {
@@ -51,14 +63,19 @@ namespace BookStore_App.Controllers
                 else
                 {
                     response.success = false;
-                    response.message = "failes to register";
+                    response.message = "Failed to register";
 
-                    return BadRequest(response);
+                    return response;
                 }
             }
-            return Ok(response);
+            return response;
         }
 
+        /// <summary>
+        /// Login User
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("login")]
         public IActionResult Login(LoginModel model)
@@ -70,7 +87,7 @@ namespace BookStore_App.Controllers
             if (data != null)
             {
                 response.success = true;
-                response.message = "successfull logged in";
+                response.message = "Successfully logged in";
                 response.data = data;
 
                 return Ok(response);
@@ -78,9 +95,11 @@ namespace BookStore_App.Controllers
             else
             {
                 response.success = false;
-                response.message = "failed to generte";
+                response.message = "failed to login";
                 return Unauthorized(response);
             }
+
+            
 
         }
     }
